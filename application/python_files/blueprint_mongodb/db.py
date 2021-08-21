@@ -20,6 +20,8 @@ def connectMongoDB(complete_uri=None):
             complete_uri=fullURI
         mongoclient=MongoClient(complete_uri)
         mongoclient.admin.command('ping')
+        print(mongoclient)
+        print(fullURI)
         
         return mongoclient
     except Exception as instance:
