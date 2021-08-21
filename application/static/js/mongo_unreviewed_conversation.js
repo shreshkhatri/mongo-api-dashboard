@@ -30,8 +30,8 @@ export function load_unreviewed_conversations(initial_date, final_date) {
         }
       }
     },
-    error: function () {
-      $(".col-conversation-list").text("error has occured");
+    error: function (e) {
+      $(".col-conversation-list").text("error has occured: "+e.Message);
     },
     complete: function () {
       $(".conv-list-loader").hide();
