@@ -1,0 +1,55 @@
+.first-col {
+  
+  .first-col-first-row {
+    padding-left: 1rem;
+    
+
+    @include media_for_xs($screen-extra-small) {
+      padding-top: 0.7rem;
+      padding-bottom: 0.3rem;
+    }
+    @include media_for_sm($screen-small) {
+      margin-top:0rem;
+    }
+  
+    @include media_for_md($screen-medium) {
+      margin-top:0rem;
+    }
+  }
+
+  .first-col-second-row {
+    
+    @include media_for_xs($screen-extra-small) {
+      min-height: 15rem;
+    }
+  
+    @include media_for_sm($screen-small) {
+      min-height: 15rem;
+    }
+  
+    @include media_for_md($screen-medium) {
+      min-height: 25rem;
+    }
+  
+  }
+
+  .first-col-third-row {
+   font-size: inherit; 
+  }
+
+  @include media_for_xs($screen-extra-small) {
+    min-height: 8rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  @include media_for_sm($screen-small) {
+    min-height: 10rem;
+    margin: 0;
+  }
+
+  @include media_for_md($screen-medium) {
+    min-height: 20rem;
+    margin: 0;
+  }
+}
