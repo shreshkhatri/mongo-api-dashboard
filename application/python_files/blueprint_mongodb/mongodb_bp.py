@@ -18,7 +18,7 @@ def load_conversations():
         if len(conversation_details)!=0:
             for anItem in conversation_details:
                 datalist=db.getConversationStartedDateForAConversation(anItem['sender_id'])
-                anItem['start_date']=datalist[0]['start_date']
+                anItem['start_date']=datalist[0]['events']['timestamp']
         return jsonify(conversation_details)
 
 
