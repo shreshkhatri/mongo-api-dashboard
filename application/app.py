@@ -7,6 +7,7 @@ from flask_fontawesome import FontAwesome
 from application.python_files import auth, api_calls, helper
 from application.python_files.chat_server_status import check_server_status
 from application.python_files.blueprint_mongodb.mongodb_bp import bp_mongodb
+from application.python_files.blueprint_analytics.analytics_bp import bp_analytics
 from datetime import datetime
 import json
 from application.python_files.blueprint_mongodb import db
@@ -42,6 +43,7 @@ fa = FontAwesome(app)
 #app.config['bearer_token']=bearer_token
 
 app.register_blueprint(bp_mongodb,url_prefix='/mongo')
+app.register_blueprint(bp_analytics,url_prefix='/analytics')
 
 #route for serving code snippet for review confirmation of a message
 @app.route('/templates/mark-conv-review')
